@@ -1,6 +1,7 @@
 resource "aws_s3_bucket" "pwa" {
-  bucket = "greminders-pwa"
-  acl    = "public-read"
+  bucket        = "greminders-pwa"
+  acl           = "public-read"
+  force_destroy = "true"
 
   tags = {
     Name = "Hosting static files"
